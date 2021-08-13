@@ -152,7 +152,7 @@ body {
   flex-grow: 1;
   text-align: initial;
 }
-.plan .rate__title {
+.plan .rate__label {
   color: #1f2f56;
   font-size: 1rem;
 }
