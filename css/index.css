@@ -61,15 +61,13 @@ body {
   display: grid;
   place-content: center;
   background-image: url(../images/pattern-background-mobile.svg);
-  background-size: cover;
+  background-size: 100vw 40vh;
   background-repeat: no-repeat;
-  background-blend-mode: multiply;
   background-color: #e0e8ff;
 }
 @media (min-width: 40em) {
   body {
     background-image: url(../images/pattern-background-desktop.svg);
-    background-size: initial;
     font-size: 1rem;
   }
 }
