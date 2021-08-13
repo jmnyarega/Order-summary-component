@@ -6,5 +6,30 @@
 @use 'abstract';
 
 body {
-    background-color: abstract.$light-blue;
+  font-family: abstract.$ff-default;
+  font-size: 0.8rem;
+  color: abstract.$desaturated-blue;
+  text-align: center;
+
+  display: grid;
+  place-content: center;
+
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-color: abstract.$pale-blue;
+
+  @media (min-width: 40em) {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: initial;
+    font-size: 1rem;
+  }
+}
+
+.container {
+  max-width: 90em;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }

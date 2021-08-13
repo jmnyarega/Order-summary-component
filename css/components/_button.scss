@@ -1,5 +1,34 @@
 @use 'abstract';
 
 .button {
-    color: abstract.$black;
+    text-decoration: none;
+    outline: none;
+    border: 1px solid transparent;
+
+    padding: 0.8em 1.8em;
+    display: block;
+    font-weight: bold;
+
+    transition: all 350ms linear;
+
+    &--primary {
+        background-color: abstract.$bright-blue;
+        color: abstract.$white;
+        border-radius: 0.5rem;
+
+        &:hover, &:focus {
+            color: abstract.$bright-blue;
+            background-color: abstract.$white;
+            border: 1px solid abstract.$bright-blue;
+        }
+    }
+
+    &--default {
+        color: inherit;
+
+        &:hover, &:focus {
+            color: abstract.$dark-blue;
+            border: 1px dotted abstract.$bright-blue;
+        }
+    }
 }

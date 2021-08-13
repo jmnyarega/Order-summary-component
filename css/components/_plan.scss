@@ -1,0 +1,38 @@
+@use 'abstract';
+
+.plan {
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: abstract.$v-light-blue;
+
+    .rate {
+        flex-grow: 1;
+        text-align: initial;
+
+        &__title {
+            color: abstract.$dark-blue;
+            font-size: 1rem;
+        }
+
+        &__price {
+            font-weight: 500;
+        }
+
+        &__link {
+            font-weight: bold;
+            color: abstract.$bright-blue;
+
+            &:focus, &:hover {
+                color: abstract.$desaturated-blue;
+                outline: 1px dotted abstract.$bright-blue;
+                outline-offset: 0.3rem;
+            }
+        }
+    }
+
+}

@@ -1,9 +1,5 @@
-/*
- *
- * Home for sass
- *
- */
-
-@use 'global';
 @use 'reset';
+@use 'global';
 @use 'components/button';
+@use 'components/card';
+@use 'components/plan';

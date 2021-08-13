@@ -1,30 +1,172 @@
 /*
- * - font types
- * - font sizes ...
+ * Custom reset files
  *
  */
-/*
- * variable colors
- *
- */
+/*----------------------------
+RESET: START
+------------------------------*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+p,
+h2,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /*
  * Global styles
  *
  */
 body {
-  background-color: lightblue;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 0.8rem;
+  color: #7280a7;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-color: #e0e8ff;
+}
+@media (min-width: 40em) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: initial;
+    font-size: 1rem;
+  }
 }
 
-/*
- * Custom reset files
- *
- */
+.container {
+  max-width: 90em;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .button {
-  color: black;
+  text-decoration: none;
+  outline: none;
+  border: 1px solid transparent;
+  padding: 0.8em 1.8em;
+  display: block;
+  font-weight: bold;
+  transition: all 350ms linear;
+}
+.button--primary {
+  background-color: #3829e0;
+  color: white;
+  border-radius: 0.5rem;
+}
+.button--primary:hover, .button--primary:focus {
+  color: #3829e0;
+  background-color: white;
+  border: 1px solid #3829e0;
+}
+.button--default {
+  color: inherit;
+}
+.button--default:hover, .button--default:focus {
+  color: #1f2f56;
+  border: 1px dotted #3829e0;
 }
 
-/*
- *
- * Home for sass
- *
- */
+.card {
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 6px 10px 3px #e0e8ff;
+}
+.card__img {
+  object-fit: cover;
+  max-width: 100%;
+  display: block;
+  border-radius: 1rem 1rem 0 0;
+}
+.card__body {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.card__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1f2f56;
+}
+.card__text {
+  max-width: 30ch;
+  margin-bottom: 1rem;
+  margin-inline: auto;
+}
+.card__plan {
+  margin-bottom: 1.5rem;
+}
+.card__cta .button + .button {
+  margin-top: 0.5rem;
+}
+
+.plan {
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f6f7fe;
+}
+.plan .rate {
+  flex-grow: 1;
+  text-align: initial;
+}
+.plan .rate__title {
+  color: #1f2f56;
+  font-size: 1rem;
+}
+.plan .rate__price {
+  font-weight: 500;
+}
+.plan .rate__link {
+  font-weight: bold;
+  color: #3829e0;
+}
+.plan .rate__link:focus, .plan .rate__link:hover {
+  color: #7280a7;
+  outline: 1px dotted #3829e0;
+  outline-offset: 0.3rem;
+}

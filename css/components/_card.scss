@@ -1,0 +1,41 @@
+@use 'abstract';
+
+.card {
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 6px 10px 3px abstract.$pale-blue;;
+    &__img {
+        object-fit: cover;
+        max-width: 100%;
+        display: block;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    &__body {
+        padding: 1.5rem;
+        background-color: abstract.$white;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: abstract.$dark-blue;
+    }
+
+    &__text {
+        max-width: 30ch;
+        margin-bottom: 1rem;
+        margin-inline: auto;
+    }
+
+    &__plan {
+        margin-bottom: 1.5rem;
+    }
+
+    &__cta {
+        .button + .button {
+            margin-top: 0.5rem;
+        }
+    }
+}
